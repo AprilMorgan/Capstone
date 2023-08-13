@@ -1,88 +1,10 @@
-#container {
-    margin: 0 auto;
-    width: 100%;
-    background: #19cee6;
-  }
-  
-  #header {
-    background: #13b6d2;
-    padding: 20px;
-  }
-  
-  #header h1 {
-    margin: 0;
-  }
-  
-  #navigation {
-    float: left;
-    width: 100%;
-    background: #333;
-  }
-  
-  #navigation ul {
-    margin: 0;
-    padding: 0;
-  }
-  
-  #navigation ul li {
-    list-style-type: none;
-    display: inline;
-  }
-  
-  #navigation li a {
-    display: block;
-    float: left;
-    padding: 5px 10px;
-    color: #fff;
-    text-decoration: none;
-    border-right: 1px solid #fff;
-  }
-  
-  #navigation li a:hover {
-    background: #383;
-  }
-  
-  #content-container {
-    float: left;
-    width: 100%;
-    background: #fff;
-  }
-  
-  #content {
-    clear: left;
-    float: left;
-    width: 60%;
-    padding: 20px 0;
-    margin: 0 0 0 4%;
-    display: inline;
-  }
-  
-  #content h2 {
-    margin: 0;
-  }
-  
-  #aside {
-    float: right;
-    width: 33%;
-    padding: 20px 0;
-    margin: 0 3% 0 0;
-    display: inline;
-  }
-  
-  #aside h3 {
-    margin: 0;
-  }
-  
-  #footer {
-    clear: left;
-    background: #ccc;
-    text-align: right;
-    padding: 20px;
-    height: 1%;
-  }
-  
-  /* PRINT STYLES*/
-  @media print {
+.container {
+    display: grid;
+    height: 100vh;
+    
+}
+
+  /* @media print {
     #header, 
     #footer, 
     #navigation {
@@ -101,7 +23,6 @@
     }
   }
   
-  /*tablet devices*/
   @media only screen and (max-width: 650px) {
     #aside {
       float: none;
@@ -117,7 +38,7 @@
       margin: auto 5%;
     }
   }
-  /* SMALL PHONES*/
+  
   @media screen and (max-width: 450px) {
     body {
       padding: 0px;
@@ -156,31 +77,8 @@
     img {
       width: 100%;
     }
-  }
-  .buttonGradient {
-    width: 50%;
-    margin: 5% 25%;
-    font-size: 15px;
-    padding: 10px;
-    background-image: linear-gradient(45deg,#c8dd5e,#16df24,#845edd);
-    border-radius: 7px;
-    border: 1px solid black;
-    transition: 1s;
-  }
+  } 
   
-  
-  .divGradient {
-    width: 50%;
-    margin: 5% 25%;
-    height: 50vh;
-    background-image: radial-gradient(#c4dd5f, #22d286, #845edd);
-    border-radius: 7px;
-    padding: 20px;
-    background: linear-gradient(45 deg, #c4dd5f, #22d286, #845edd);   
-    background-size: 400% 400%;
-    -webkit-animation: AnimationName 1s ease infinite;
-    animation: AnimationName 1s ease infinite;
-  }
   @-webkit-keyframes pulsate {
     0% {background-position: 0% 50%}
       
@@ -197,8 +95,4 @@
       
     100% {background-position: 0% 50%}
   }
-  
-  .flex-container {
-      display: flex;
-      flex-direction: row;
-    }
+  */
