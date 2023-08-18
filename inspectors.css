@@ -1,3 +1,7 @@
+body{
+    padding: 5px;
+    border-radius: 5px;
+}
 .container {
     display: grid;
     height: 100vh;
@@ -14,51 +18,51 @@
 nav{
     background: rgb(28, 199, 222);
     grid-area: nav;
-    padding: 3px;
-    border-radius: 3px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+    justify-content: left;
+    grid-template-rows: max-content;    
 }
 
 main{
     background: rgb(30, 210, 207);
     grid-area: main;
-    padding: 3px;
-    border-radius: 3px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #sidebar{
     background: rgb(68, 131, 214);
     grid-area: sidebar;
-    padding: 3px;
-    border-radius: 3px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #content1{
     background: rgb(45, 239, 45);
     grid-area: content1;
-    padding: 3px;
-    border-radius: 3px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #content2{
     background: rgb(181, 240, 19);
     grid-area: content2;
-    padding: 3px;
-    border-radius: 3px;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 #content3{
     background: rgb(11, 215, 15);
     grid-area: content3;
-    padding: 3px;
-    border-radius: 3px;
+    padding: 5px;
+    border-radius: 5px;
 }
 footer{
     background: rgb(166, 236, 26);
     grid-area: footer;
-    padding: 3px;
-    border-radius: 3px;
+    padding: 5px;
+    border-radius: 5px;
 }
 @media only screen and (max-width:550px){
     .container{
