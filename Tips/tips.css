@@ -1,0 +1,143 @@
+.container {
+    display: grid;
+    height: 98vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 0.5fr 0.2fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "footer footer footer footer";
+    grid-gap: 0.2rem;
+}
+
+nav {
+    grid-area: nav;
+    background: darkgrey;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    display: flex;
+    border-style: outset;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+    padding: none;
+}
+
+a {
+    display: block;
+    padding-inline-start: 50px;
+    padding-inline-end: 50px;
+    text-decoration: none;
+
+}
+
+main {
+    grid-area: main;
+    background: rgb(30, 210, 207);
+    padding: 3px;
+    border-radius: 3px;
+    border-style: ridge;
+    color: white;
+    text-shadow: 2px;
+}
+
+main > h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+main > h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+main > p {
+    text-align: center;
+}
+#sidebar {
+    grid-area: sidebar;
+    background-color:white;
+    background-repeat: none;
+    size: 100%;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-style: ridge;
+    color: blue;
+}
+
+#sidebar > h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-left: 5px;
+}
+
+#content1 {
+    grid-area: content1;
+    background: white;
+    padding: 3px;
+    border-radius: 3px;
+    border-style: ridge;
+    color: blue;
+}
+
+#content2 {
+    grid-area: content2;
+    background: white;
+    padding: 3px;
+    border-radius: 3px;
+    border-style: ridge;
+    color: blue;
+}
+
+#content3 {
+    grid-area: content3;
+    background: white;
+    padding: 3px;
+    border-radius: 3px;
+    border-style: ridge;
+    color: blue;
+}
+
+footer { 
+    grid-area: footer;
+    background: darkturquoise;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    border-style: outset;
+}
+
+footer > img {
+    float: left;
+    padding-inline-start: 5px;
+}
+
+footer > p {
+    padding: 0 175px;
+    text-align: center;
+}
+@media only screen and (max-width:550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 
+        0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+            "nav"
+            "sidebar"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "footer";
+    }
+}

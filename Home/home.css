@@ -1,0 +1,126 @@
+.container {
+    display: grid;
+    height: 98vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 0.5fr 0.2fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar main main main"
+    "footer footer footer footer";
+    grid-gap: 0.2rem;
+}
+
+nav {
+    grid-area: nav;
+    background: darkgray;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    display: flex; 
+    border-style: outset;
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+ul > li {
+    float: left;
+    padding: none;
+}
+
+li > a {
+    padding-inline-start: 50px;
+    padding-inline-end: 50px;
+    text-decoration: none;
+
+}
+
+main {
+    grid-area: main;
+    background: white;
+    border-radius: 3px;
+    position: relative;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.top-center {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    font-size: 18px;
+    
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 20px;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+main > img {
+    opacity: 70%;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    background: rgb(68, 131, 214);
+    padding: 5px;
+    border-radius: 3px;
+    font-family: fantasy;
+}
+
+#sidebar > h1 {
+    text-align: center;
+    font-size: 35px;
+}
+
+#sidebar > p {
+    font-size: 20px;
+    padding: 5px 5px;
+    margin-left: 10px;
+}
+
+footer {
+    grid-area: footer;
+    background: darkturquoise;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    border-style: outset;
+    
+}
+
+footer > img {
+    float: left;
+    padding-inline-start: 5px;
+}
+
+footer > p {
+    padding: 0 175px;
+    text-align: center;
+}
+
+
+@media only screen and (max-width:550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 
+        0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+            "nav"
+            "sidebar"
+            "main"
+            "footer";
+    }
+}

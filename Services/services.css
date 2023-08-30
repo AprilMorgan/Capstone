@@ -1,0 +1,147 @@
+.container {
+    display: grid;
+    height: 98vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 1fr 1fr 0.1fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar content1 content2 content3"
+    "footer footer footer footer";
+    grid-gap: 0.2rem;
+}
+
+nav {
+    grid-area: nav;
+    background: darkgray;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    display: flex;
+    border-style: outset;
+}
+
+nav > ul {
+    list-style-type: none;
+}
+
+ul > li {
+    float: left;
+    padding: none;
+}
+
+li > a {
+    display: block;
+    padding-inline-start: 50px;
+    padding-inline-end: 50px;
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+    background: rgb(30, 210, 207);
+    padding: 3px;
+    border-radius: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-style: outset;
+}
+
+main > h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+main > ul {
+    margin-left: 20px;
+    font-size: 25px;
+    column-count: 3;
+}
+
+#sidebar {
+    grid-area: sidebar;
+    background: rgb(68, 131, 214);
+    padding: 3px;
+    border-radius: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-style: outset;
+}
+
+#sidebar > ul {
+    margin-left: 25px;
+    padding: 0;
+    font-size: 20px;
+}
+
+#sidebar > h1 {
+    text-align: center;
+}
+
+#content1 {
+    background: darkblue;
+    grid-area: content1;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+#content1 > img {
+    padding-top: 3px;
+}
+
+#content2 {
+    grid-area: content2;
+    background: darkblue;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+#content2 >img {
+    padding-top: 3px;
+}
+
+#content3 {
+    grid-area: content3;
+    background: darkblue;
+    padding: 3px;
+    border-radius: 3px;
+}
+
+#content3 > img {
+    padding-top: 3px;
+}
+
+footer {
+    grid-area: footer;
+    background: darkturquoise;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+    border-style: outset;
+}
+
+footer > img {
+    float: left;
+    padding-inline-start: 5px;
+}
+
+footer > p {
+    padding: 0 175px;
+    text-align: center;
+}
+
+@media only screen and (max-width:550px){
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 
+        0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+        grid-template-areas:
+            "nav"
+            "sidebar"
+            "main"
+            "content1"
+            "content2"
+            "content3"
+            "footer";
+    }
+}

@@ -1,0 +1,107 @@
+.container {
+    display: grid;
+    height: 98vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 0.5fr 0.2fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer";
+    grid-gap: 0.2rem;
+}
+
+nav {
+    grid-area: nav;
+    background: darkgrey;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px; 
+    display: flex;
+    border-style: outset;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    float: left;
+    padding: none;
+}
+
+a {
+    display: block;
+    padding-inline-start: 50px;
+    padding-inline-end: 50px;
+    text-decoration: none;
+}
+
+main {
+    grid-area: main;
+    border-radius: 3px;
+    background-color: antiquewhite;
+    padding: 3px;
+    border-radius: 3px;
+    border-style: double;
+}
+  
+input {
+    width: 50%;
+    margin-top: 7px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: vertical;
+    display: block;
+}
+  
+button {
+    background-color: black;
+    font-size: 20px;
+    height: 75px;
+    width: 150px;
+    color: white;
+    font-size: x-large;
+}
+
+label {
+    padding: 10px;
+}
+
+#message {
+    height: 300px;
+} 
+
+footer {
+    grid-area: footer;
+    background: darkturquoise;
+    padding: 3px;
+    border-radius: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px; 
+    border-style: outset;
+}
+
+footer > img {
+    float: left;
+    padding-inline-start: 5px;
+}
+
+footer > p {
+    padding: 0 60px;
+    text-align: center;
+}
+
+@media only screen and (max-width:550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 
+        0.2fr 1.5fr 0.5fr;
+        grid-template-areas:
+            "nav"
+            "main"
+            "footer";
+    }
+}
